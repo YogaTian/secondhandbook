@@ -2,18 +2,32 @@
 <html>
 <head>
 	<title>Welcome to SecondHandBook online store</title>
+	<link rel="stylesheet" type="text/css" href="dropdown.css">
+	<script src="dropdown.js"></script>
 </head>
 <body>
 	<h1>Complete your information</h1>
 	<form action="userInfo.php" method="post">
-		<h2>Gender</h2>
-		<input type="radio" name="gender" value="male" checked> Male<br>
-		<input type="radio" name="gender" value="female" checked> Female<br>
-		<input type="radio" name="gender" value="other" checked> Other
+		<h2>Nickname</h2>
+		<input type="text" name="nickname" value="currentName"><br>
 		<!--<h3>Birthday</h3>
 		<input type="datetime-local" name="bdaytime">-->
 		<h3>Age</h3>
+		<input type="text" name="age" value="currentAge"><br>
+		<h4>Gender</h4>
+		<input type="radio" name="gender" value="male" checked> Male<br>
+		<input type="radio" name="gender" value="female"> Female<br>
+		<input type="radio" name="gender" value="other"> Other
 		<input type="text" name="age" value="">
+		<h5>Subject</h5>
+		<div class="dropdown">
+		  <button onclick="myFunction()" class="dropbtn">Choose your major</button>
+		  <div id="myDropdown" class="dropdown-content">
+			<p>ALotOfMajors</p>
+			<!--find subjects and add values-->
+		  </div>
+		</div>
+		<h6>Commit All Changes</h6>
 		<input type="submit" value="Submit">
 	</form>
 </body>
